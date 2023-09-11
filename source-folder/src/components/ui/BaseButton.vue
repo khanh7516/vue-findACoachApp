@@ -58,6 +58,11 @@ button:active {
   color: #3a0061;
   border: none;
 }
+.white {
+  background-color: white;
+  color: #3a0061;
+  border: none;
+}
 
 .outline {
   background-color: transparent;
@@ -71,5 +76,10 @@ button:active {
 .outline:active {
   background-color: #edd2ff;
 }
+.white:hover,
+.white:active {
+  background-color: orange;
+}
+
 
 </style>

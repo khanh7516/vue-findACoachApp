@@ -31,14 +31,15 @@ export default {
   },
   async fetchRequests(context) {
     const coachId = context.rootGetters.userID;
-
+    const token = context.rootGetters.token;
     const response = await fetch(
-      `https://hello-f4192-default-rtdb.asia-southeast1.firebasedatabase.app/requests/${coachId}.json`
+      `https://hello-f4192-default-rtdb.asia-southeast1.firebasedatabase.app/requests/${coachId}.json?auth=${token}`
     );
 
     const responseData = await response.json();
 
     if (!response.ok) {
+      console.log(responseData);
       const error = new Error(responseData.message || "Failed to send request");
       throw error;
     }
@@ -61,4 +62,6 @@ export default {
 
     context.commit("setRequests", requests);
   },
+
+
 };
