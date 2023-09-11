@@ -15,6 +15,7 @@ export default {
       `https://hello-f4192-default-rtdb.asia-southeast1.firebasedatabase.app/coaches/${userId}.json?auth=${token}`,
       {
         method: "PUT",
+        // method: 'POST',
         body: JSON.stringify(coachData),
       }
     );

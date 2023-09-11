@@ -46,8 +46,8 @@ export default {
 
     //expiresIn = expiresIn(responseData)(second) * 1000 -> milisecond
     //convert to number by adding "+"
-    // const expiresIn = +responseData.expiresIn * 1000;
-    const expiresIn = 5000;
+    const expiresIn = +responseData.expiresIn * 1000;
+    // const expiresIn = 5000;
 
     //expirationDate = this.Time + expiresIn(milisecond)
     const expirationDate = new Date().getTime() + expiresIn;
